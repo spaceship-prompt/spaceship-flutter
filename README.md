@@ -110,7 +110,7 @@ source "~/.zsh/spaceship-flutter/spaceship-flutter.plugin.zsh"
 
 ## Usage
 
-After installing, add the following line to your `.zshrc` in order to include Ember section in the prompt:
+After installing, add the following line to your `.zshrc` in order to include Flutter section in the prompt:
 
 ```zsh
 spaceship add flutter
