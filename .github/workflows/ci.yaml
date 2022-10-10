@@ -18,6 +18,11 @@ jobs:
       - name: 🖨 Print Zsh Vesion
         run: zsh --version
 
+      - name: Install ruby
+        run: |
+          apk update
+          apk add ruby
+
       - name: 🧪 Run Tests
         run: ./tests/spaceship-flutter.test.zsh
 
