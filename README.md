@@ -1,20 +1,20 @@
 <h1 align="center">
-  😍 + 🚀
-  <br>Spaceship Section<br>
+  💙 + 🚀
+  <br>Spaceship Flutter<br>
 </h1>
 
 <h4 align="center">
-  A <a href="https://template.com" target="_blank">Foobar</a> section for Spaceship prompt
+  A <a href="https://flutter.dev" target="_blank">Flutter</a> section for Spaceship prompt
 </h4>
 
 <p align="center">
-  <a href="https://github.com/spaceship-prompt/spaceship-section/releases">
-    <img src="https://img.shields.io/github/v/release/spaceship-prompt/spaceship-section.svg?style=flat-square"
+  <a href="https://github.com/spaceship-prompt/spaceship-flutter/releases">
+    <img src="https://img.shields.io/github/v/release/spaceship-prompt/spaceship-flutter.svg?style=flat-square"
       alt="GitHub Release" />
   </a>
 
-  <a href="https://github.com/spaceship-prompt/spaceship-section/actions">
-    <img src="https://img.shields.io/github/workflow/status/spaceship-prompt/spaceship-section/ci?style=flat-square"
+  <a href="https://github.com/spaceship-prompt/spaceship-flutter/actions">
+    <img src="https://img.shields.io/github/workflow/status/spaceship-prompt/spaceship-flutter/ci?style=flat-square"
       alt="GitHub Workflow Status" />
   </a>
 
@@ -31,7 +31,7 @@
   </a>
 </p>
 
-Current Foobar version, through foobar (`😍`).
+Current Flutter version, through flutter (`💙`).
 
 ## Installing
 
@@ -42,70 +42,70 @@ You need to source this plugin somewhere in your dotfiles. Here's how to do it w
 Execute this command to clone this repo into Oh-My-Zsh plugin's folder:
 
 ```zsh
-git clone https://github.com/spaceship-prompt/spaceship-section.git $ZSH_CUSTOM/plugins/spaceship-section
+git clone https://github.com/spaceship-prompt/spaceship-flutter.git $ZSH_CUSTOM/plugins/spaceship-flutter
 ```
 
-Include `spaceship-section` in Oh-My-Zsh plugins list:
+Include `spaceship-flutter` in Oh-My-Zsh plugins list:
 
 ```zsh
-plugins=($plugins spaceship-section)
+plugins=($plugins spaceship-flutter)
 ```
 
 ### [zplug]
 
 ```zsh
-zplug "spaceship-prompt/spaceship-section"
+zplug "spaceship-prompt/spaceship-flutter"
 ```
 
 ### [antigen]
 
 ```zsh
-antigen bundle "spaceship-prompt/spaceship-section"
+antigen bundle "spaceship-prompt/spaceship-flutter@main"
 ```
 
 ### [antibody]
 
 ```zsh
-antibody bundle "spaceship-prompt/spaceship-section"
+antibody bundle "spaceship-prompt/spaceship-flutter"
 ```
 
 ### [zinit]
 
 ```zsh
-zinit light "spaceship-prompt/spaceship-section"
+zinit light "spaceship-prompt/spaceship-flutter"
 ```
 
 ### [zgen]
 
 ```zsh
-zgen load "spaceship-prompt/spaceship-section"
+zgen load "spaceship-prompt/spaceship-flutter"
 ```
 
 ### [sheldon]
 
 ```toml
-[plugins.spaceship-section]
-github = "spaceship-prompt/spaceship-section"
+[plugins.spaceship-flutter]
+github = "spaceship-prompt/spaceship-flutter"
 ```
 
 ### Manual
 
 If none of the above methods works for you, you can install Spaceship manually.
 
-1. Clone this repo somewhere, for example to `$HOME/.zsh/spaceship-section`.
+1. Clone this repo somewhere, for example to `$HOME/.zsh/spaceship-flutter`.
 2. Source this section in your `~/.zshrc`.
 
 ### Example
 
 ```zsh
 mkdir -p "$HOME/.zsh"
-git clone --depth=1 https://github.com/spaceship-prompt/spaceship-section.git "$HOME/.zsh/spaceship-section"
+git clone --depth=1 https://github.com/spaceship-prompt/spaceship-flutter.git "$HOME/.zsh/spaceship-flutter"
 ```
 
 For initializing prompt system add this to your `.zshrc`:
 
 ```zsh title=".zshrc"
-source "~/.zsh/spaceship-section/spaceship-section.plugin.zsh"
+source "~/.zsh/spaceship-flutter/spaceship-flutter.plugin.zsh"
 ```
 
 ## Usage
@@ -113,24 +113,33 @@ source "~/.zsh/spaceship-section/spaceship-section.plugin.zsh"
 After installing, add the following line to your `.zshrc` in order to include Ember section in the prompt:
 
 ```zsh
-spaceship add foobar
+spaceship add flutter
 ```
 
 ## Options
 
-This section is shown only in directories within a foobar context.
+The `flutter` section displays the current version and channel of Flutter.
 
-| Variable                   |              Default               | Meaning                              |
-| :------------------------- | :--------------------------------: | ------------------------------------ |
-| `SPACESHIP_FOOBAR_SHOW`   |               `true`               | Show current section                 |
-| `SPACESHIP_FOOBAR_PREFIX` | `$SPACESHIP_PROMPT_DEFAULT_PREFIX` | Prefix before section                |
-| `SPACESHIP_FOOBAR_SUFFIX` | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after section                 |
-| `SPACESHIP_FOOBAR_SYMBOL` |               `😍·`                | Character to be shown before version |
-| `SPACESHIP_FOOBAR_COLOR`  |             `yellow`               | Color of section                     |
+This section is displayed only when the current directory is within a [Dart](https://dart.dev/) project
+with [Flutter](https://flutter.dev/) dependency.
+
+| Variable                           | Default                             | Meaning                             |
+| :--------------------------------- | :--------------------------------:  | ----------------------------------- |
+| `SPACESHIP_FLUTTER_SHOW`           | `true`                              | Show section                        |
+| `SPACESHIP_FLUTTER_ASYNC`          | `true`                              | Render section asynchronously       |
+| `SPACESHIP_FLUTTER_PREFIX`         | `$SPACESHIP_PROMPT_DEFAULT_PREFIX`  | Section's prefix                    |
+| `SPACESHIP_FLUTTER_SUFFIX`         | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX`  | Section's suffix                    |
+| `SPACESHIP_FLUTTER_SYMBOL`         | `💙·`                               | Symbol displayed before the section |
+| `SPACESHIP_FLUTTER_COLOR`          | `blue`                              | Section's color                     |
+| `SPACESHIP_FLUTTER_CHANNEL_SHOW`   | `true`                              | Show channel                        |
+| `SPACESHIP_FLUTTER_CHANNEL_PREFIX` | ``                                  | Channel's prefix                    |
+| `SPACESHIP_FLUTTER_CHANNEL_SUFFIX` | ``                                  | Channel's suffix                    |
+| `SPACESHIP_FLUTTER_CHANNEL_SYMBOL` | `.#`                                | Symbol displayed before the channel |
+
 
 ## License
 
-MIT © [Name Surname](http://yourwebsite.com)
+MIT © [Peter Merikan](http://merikan.com) and [Denys Dovhan](http://denysdovhan.com)
 
 <!-- References -->
 
