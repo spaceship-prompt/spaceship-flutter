@@ -82,10 +82,20 @@ zgen load "spaceship-prompt/spaceship-flutter"
 ```
 
 ### [sheldon]
-
+**Important!!** Make sure the flutter section is loaded before `spaceship-prompt` itself, see below.   
+Add the plugin with the Sheldon command
+```
+sheldon add spaceship-flutter --github spaceship-prompt/spaceship-flutter
+```
+or edit your `plugins.toml` file directly with `sheldon edit`.
 ```toml
+[plugins]
+
 [plugins.spaceship-flutter]
-github = "spaceship-prompt/spaceship-flutter"
+github = 'spaceship-prompt/spaceship-flutter'
+
+[plugins.spaceship]
+github = 'spaceship-prompt/spaceship-prompt'
 ```
 
 ### Manual
