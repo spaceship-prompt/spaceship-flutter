@@ -10,10 +10,10 @@ jobs:
   main:
     name: Tests
     runs-on: ubuntu-latest
-    container: ghcr.io/spaceship-prompt/spaceship-prompt:master
+    container: ghcr.io/spaceship-prompt/spaceship-prompt:latest
     steps:
       - name: ⬇️ Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
 
       - name: 🖨 Print Zsh Vesion
         run: zsh --version
@@ -33,10 +33,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
 
       - name: 🚀 Release
-        uses: cycjimmy/semantic-release-action@v2
+        uses: cycjimmy/semantic-release-action@v6
         with:
           extra_plugins: |
             @semantic-release/changelog
